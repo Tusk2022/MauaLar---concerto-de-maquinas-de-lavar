@@ -9,8 +9,8 @@
   <title>Maualar — Eletrodomésticos &amp; Assistência Técnica em Mauá SP</title>
 
   <!-- SEO: Descrição e palavras-chave -->
-  <meta name="description" content="Maualar: venda e conserto de máquinas de lavar, micro-ondas, tanquinhos e eletrodomésticos em Mauá SP. Assistência técnica especializada há 30 anos. Peças originais. Ligue (11) 97723-3730." />
-  <meta name="keywords" content="conserto máquina de lavar Mauá, assistência técnica eletrodomésticos Mauá, conserto micro-ondas Mauá, tanquinho Mauá, loja eletrodomésticos Mauá SP, reparo máquina lavar Mauá, peças eletrodomésticos Mauá, lava e seca conserto Mauá, Maualar, eletrodomésticos Av Barão de Mauá" />
+  <meta name="description" content="Mauá Lar (Maualar): conserto de máquinas de lavar, manutenção de eletrodomésticos e peças originais em Mauá SP. Reparo de geladeira, conserto de tanquinho, micro-ondas e lava e seca. Assistência técnica especializada há 30 anos. Ligue (11) 97723-3730." />
+  <meta name="keywords" content="maualar, MauaLar, Mauá Lar, conserto de máquinas de lavar, manutenção eletrodomésticos Mauá, reparo geladeira Mauá, conserto tanquinho Mauá, peças originais eletrodomésticos, assistência técnica eletrodomésticos Mauá, conserto micro-ondas Mauá, loja eletrodomésticos Mauá SP, reparo máquina lavar Mauá, lava e seca conserto Mauá, eletrodomésticos Av Barão de Mauá" />
   <meta name="author" content="Maualar Eletrodomésticos" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://maualar.com.br/" />
@@ -63,7 +63,7 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Tanquinho" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Lava e Seca" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Assistência Técnica em Eletrodomésticos" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Venda de Peças Originais para Eletrodomésticos" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Venda de Peças Originais para Eletrodomésticos", "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "BRL", "seller": { "@type": "Organization", "name": "Maualar Eletrodomésticos" } } } }
       ]
     }
   }
@@ -1183,6 +1183,44 @@
 
       .institucional-highlight { text-align: left; }
     }
+
+    /* ─── WhatsApp Floating Button ──────────────────────────── */
+    .whatsapp-float {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.75rem;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50px;
+      padding: 0.75rem 1.125rem 0.75rem 0.875rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45), 0 2px 8px rgba(0,0,0,0.25);
+      text-decoration: none;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .whatsapp-float:hover {
+      background: #1ebe5a;
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.55), 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-float:active { transform: scale(0.97); }
+
+    .whatsapp-float svg { flex-shrink: 0; }
+
+    @media (max-width: 480px) {
+      .whatsapp-float { padding: 0.875rem; border-radius: 50%; }
+      .whatsapp-float .whatsapp-label { display: none; }
+    }
   </style>
 </head>
 
@@ -1721,6 +1759,22 @@
     <p class="footer-copy">&copy; 2026 Maualar Eletrodomésticos. Todos os direitos reservados.</p>
   </div>
 </footer>
+
+
+<!-- ─── WHATSAPP FLUTUANTE ────────────────────────────────── -->
+<a
+  href="https://wa.me/5511977233730?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento."
+  target="_blank"
+  rel="noopener noreferrer"
+  class="whatsapp-float"
+  aria-label="Conversar no WhatsApp"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.121 1.527 5.849L.057 23.571a.75.75 0 00.923.923l5.725-1.47A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.659-.498-5.191-1.369l-.373-.214-3.397.872.888-3.328-.228-.374A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+  </svg>
+  <span class="whatsapp-label">WhatsApp</span>
+</a>
 
 
 <!-- ─── SCRIPTS ───────────────────────────────────────────── -->
